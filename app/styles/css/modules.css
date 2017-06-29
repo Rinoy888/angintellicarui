@@ -1,0 +1,121 @@
+.wid-w-1 {
+  width: 12.5vw; }
+
+.wid-w-1-5 {
+  width: 18.75vw; }
+
+.wid-w-2 {
+  width: 25vw; }
+
+.wid-w-3 {
+  width: 37.5vw; }
+
+.wid-w-4 {
+  width: 50vw; }
+
+.wid-w-5 {
+  width: 62.5vw; }
+
+.wid-w-6 {
+  width: 75vw; }
+
+.wid-w-7 {
+  width: 87.5vw; }
+
+.wid-w-8 {
+  width: 100vw; }
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /* Ripple magic */ }
+  .main button {
+    width: 5vw;
+    height: 2vh;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+    border-radius: 2px;
+    font-size: 15px;
+    line-height: 25%;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: #2196F3; }
+  .main button {
+    position: relative;
+    overflow: hidden; }
+  .main button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%; }
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1; }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40); } }
+  .main button:focus:not(:active)::after {
+    animation: ripple 1s ease-out; }
+  .main .dropdown {
+    width: 15vw;
+    height: 4vh;
+    font-family: Roboto;
+    font-size: 15px;
+    padding: 2px;
+    border: none;
+    background: #ffffff;
+    box-shadow: 1px 1px 3px #888888;
+    outline: none;
+    transition: 0.5s; }
+  .main select {
+    -webkit-appearance: none; }
+  .main select:focus {
+    outline: none; }
+  .main select option {
+    color: #000;
+    border: none; }
+  .main select option:focus {
+    color: #000;
+    box-shadow: inset 20px 20px #0000ff; }
+  .main .options {
+    width: 10vw;
+    min-height: 2em;
+    padding: 5px;
+    font-family: Roboto;
+    font-weight: 300;
+    transition: 0.5s;
+    width: 10vw;
+    height: 20vh;
+    border: none; }
+  .main .options:focus {
+    outline: none; }
+  .main .options:focus {
+    outline-color: red; }
+  .main .profile-pic {
+    width: 100vw;
+    height: 10vh; }
+    @media screen and (min-width: 1200px) {
+      .main .profile-pic {
+        background: blue; } }
+    @media screen and (max-width: 720px) {
+      .main .profile-pic {
+        background: green; } }
+    @media screen and (min-width: 320px) {
+      .main .profile-pic {
+        background: grey; } }
+
+/*# sourceMappingURL=modules.css.map */
